@@ -69,11 +69,10 @@
                                     </div>
                                     <a href="<?php the_permalink(); ?>" class="c-news_title"><?php the_title(); ?></a>
                                 </div>
-                            <?php
-                                endwhile;
-                                wp_reset_postdata();
-                            endif;
-                            ?>
+                                <?php endwhile; ?>
+                            <?php else: ?>
+                                <p style="margin-top: 80px; text-align: center;">No results found</p>
+                            <?php endif; wp_reset_postdata(); ?>
                         </div>
                     </div>
                     <?php if ($the_query->max_num_pages > 1): ?>
